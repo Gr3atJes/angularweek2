@@ -1,26 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule} from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
-import { FormsModule} from '@angular/forms';
-
-import { ProfileService } from './services/profile.service';
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProfileComponent } from './components/profile/profile.component';
+import {HttpClientModule} from '@angular/common/http';
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ProfileService } from './profile.service';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AboutComponent,
+    HomeComponent,
     ProfileComponent,
-    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [ProfileService],
